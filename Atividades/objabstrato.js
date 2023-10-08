@@ -21,6 +21,7 @@ class Carro {
     frear() {
         console.log("Freando...");
     }
+
 }
 
 
@@ -31,6 +32,7 @@ class Moto {
         this.ano = ano;
         this.cor = cor;
     }
+
         ligar() {
             console.log("Ligando...");
         }
@@ -45,11 +47,14 @@ class Moto {
         frear() {
             console.log("Freando...");
         }
+
 }
 
+
 class Computador {
-    constructor(marca, modelo, ) {
+    constructor(marca, modelo) {
 }
+
     ligar () {
         console.log("Ligando...");
     }
@@ -72,9 +77,11 @@ class Notebook extends Computador {
         this.tamanhoMonitor = tamanhoMonitor;
         
 }
+
     calcularPotencia () {
         return this.tamanho * this.ram * this.processador;
     }
+
 }
 
 class Animal {
@@ -86,6 +93,7 @@ class Animal {
     emitirSom() {
         throw new Error("Método emitirSom não implementado");
     }
+
 }
 
 class Cachorro extends Animal {
@@ -97,12 +105,10 @@ class Cachorro extends Animal {
     emitirSom() {
         return "Au au!";
     }
+
 }
 
 const moto = new Moto("Honda", "CG 160", 2023, "Vermelha");
 const carro = new Carro("Fiat", "Argo", 2023, "Branco");
 const cachorro = new Cachorro("Totó", "Cão", "Poodle");
 const notebook = new Notebook("Dell", "Inspiron 15", 15.6, 8, "Intel Core i5", 1920);
-
-
-console.log(moto);
