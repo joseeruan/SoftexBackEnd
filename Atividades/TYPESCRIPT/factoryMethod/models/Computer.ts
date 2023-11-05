@@ -1,6 +1,5 @@
 import { iProduto } from "../interface/iProduto";
 
-
 export abstract class Computer implements iProduto {
     private ram: number;
     private ssd: number;
@@ -30,18 +29,33 @@ export abstract class Computer implements iProduto {
         return this.tipo;
     }
 
+    getRam(): number {
+        return this.ram;
+    }
+
+    getCPU(): number {
+        return this.cpu;
+    }
+
+    getSdd(): number {
+        return this.ssd;
+    }
+
     setTipo(tipo: number): number {
         this.tipo = tipo;
         return this.tipo;
     }
+
     setDescricao(descricao: string): string {
         this.descricao = descricao;
         return this.descricao;
     }
+
     setPreco(preco: number): number {
         this.preco = preco;
         return this.preco;
     }
+
     toString(): string {
         return `Tipo: ${this.tipo}, 
         Descrição: ${this.descricao}, 
