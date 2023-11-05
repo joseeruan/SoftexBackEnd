@@ -1,10 +1,12 @@
 export abstract class Veiculo {
+  private tipo: string;
   private modelo: string;
   private marca: string;
   private cor: string;
   private qtdRodas: number;
 
-  constructor(modelo: string, marca: string, cor: string, qtdRodas: number) {
+  constructor(tipo: string, modelo: string, marca: string, cor: string, qtdRodas: number) {
+    this.tipo = tipo;
     this.modelo = modelo;
     this.marca = marca;
     this.cor = cor;
@@ -17,6 +19,7 @@ export abstract class Veiculo {
 
   represent() {
     return ` 
+   Tipo: ${this.tipo}
      modelo: ${this.modelo}
      marca: ${this.marca}
      cor: ${this.cor}

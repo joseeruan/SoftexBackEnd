@@ -9,24 +9,32 @@ export class Aplicacao {
     this.veiculos = [];
   }
 
+  getVeiculos () {
+    for(const veiculo of this.veiculos) {
+      console.log(veiculo.represent())
+  }
+}
   criarCarro(
+    tipo: string,
     modelo: string,
     marca: string,
     cor: string,
     qtdRodas: number,
     numeroPortas: number
   ) {
-    const carro = new Carro(modelo, marca, cor, qtdRodas, numeroPortas);
+    const carro = new Carro(tipo, modelo, marca, cor, qtdRodas, numeroPortas);
     this.veiculos.push(carro);
   }
+
   criarMoto(
+    tipo: string,
     modelo: string,
     marca: string,
     cor: string,
     qtdRodas: number,
     temBagageiro: boolean
   ) {
-    const moto = new Moto(modelo, marca, cor, qtdRodas, temBagageiro);
+    const moto = new Moto(tipo, modelo, marca, cor, qtdRodas, temBagageiro);
     this.veiculos.push(moto);
   }
 

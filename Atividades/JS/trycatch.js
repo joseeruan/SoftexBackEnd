@@ -1,6 +1,5 @@
 const input = require('readline-sync');
 
-
 let continuar = false;
 do {
     try {

@@ -16,14 +16,16 @@ let contaCliente2 = new Conta(cliente2, 765455, agencia01, 4500.25);
 
 
 
-contaCliente1.sacar(100);
+//contaCliente1.sacar(100);
 contaCliente1.tranferir(534, contaCliente2);
-contaCliente1.pagar(434);
+//contaCliente1.pagar(434);
 
 
-contaCliente2.depositar(545);
-contaCliente2.depositar(434);
-contaCliente2.pagar(100)
-contaCliente2.pagar(544);
+//contaCliente2.depositar(545);
+//contaCliente2.depositar(434);
+//contaCliente2.pagar(100)
+//contaCliente2.pagar(544);
 
 console.log(contaCliente2.mostrarExtrato());
+
+console.log(Conta.qtdContas())
