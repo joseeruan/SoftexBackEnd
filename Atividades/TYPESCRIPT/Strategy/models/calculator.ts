@@ -6,7 +6,7 @@ export class Calculator {
   public setStrategy(strategy: Strategy): void {
     this.strategy = strategy;
   }
-  public calcular(n1: number, n2: number): number | undefined {
+  public calculate(n1: number, n2: number): number | undefined {
     if (this.strategy) {
       let result = this.strategy.execute(n1, n2);
       console.log(this.strategy.toString(n1, n2, result));
