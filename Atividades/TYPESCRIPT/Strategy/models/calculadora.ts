@@ -1,25 +1,16 @@
-import { Multiplicar } from "./multiplicar";
-import { Somar } from "./somar";
-import { Subtrair } from "./subtrair";
+import { Strategy } from "../interface/iStrategy";
 
 export class Calculadora {
-  public calcular(n1: number, n2: number, operacao: string) {
-    operacao = operacao.toLowerCase();
+  private strategy: Strategy;
 
-    if (operacao === "somar") {
-      const somar = new Somar();
-      let resultado = somar.execute(n1, n2);
-      console.log(somar.toString(n1, n2, resultado));
-    } else if (operacao === "multiplicar") {
-      const multiplicar = new Multiplicar();
-      let resultado = multiplicar.execute(n1, n2);
-      console.log(multiplicar.toString(n1, n2, resultado));
-    } else if (operacao === "subtrair") {
-      const subtrair = new Subtrair();
-      let resultado = subtrair.execute(n1, n2);
-      console.log(subtrair.toString(n1, n2, resultado));
+  setStrategy(strategy: Strategy): void {
+    this.strategy = strategy;
+  }
+  calcular(n1: number, n2: number): number | undefined {
+    if (this.strategy) {
+      return this.strategy.execute(n1, n2);
     } else {
-      console.log("Operação inválida");
+      console.log("Estratégia não definida.");
     }
   }
 }
